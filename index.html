@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ESP32-CAM FTP Viewer</title>
+</head>
+<body>
+  <h1>ESP32-CAM FTP Viewer</h1>
+  
+  <!-- Display the latest photo -->
+  <h2>Latest Photo</h2>
+  <img id="photo" src="" alt="Latest Photo" style="max-width: 100%;">
+
+  <!-- Display the latest video frame -->
+  <h2>Latest Video Frame</h2>
+  <video id="video" controls width="640" height="480">
+    Your browser does not support the video tag.
+  </video>
+
+  <script>
+    // Function to update the latest photo
+    function updatePhoto() {
+      const photo = document.getElementById('photo');
+      const timestamp = new Date().getTime();
+      photo.src = `photo.jpg?timestamp=${timestamp}`;
+    }
+
+    // Function to update the latest video frame
+    function updateVideo() {
+      const video = document.getElementById('video');
+      const timestamp = new Date().getTime();
+      video.src = `video_frame.jpg?timestamp=${timestamp}`;
+    }
+
+    // Update photo and video every 5 seconds
+    setInterval(() => {
+      updatePhoto();
+      updateVideo();
+    }, 5000);
+  </script>
+</body>
+</html>ew the site.</noscript>
+
+        <div class="spinner"><div class="spinner__inner"></div></div>
+    </div>
+
+    <script id="js-vendor" src="dist/dll.vendor.js"></script>
+    <script id="js-main" src="dist/main.js"></script>
+
+    
+</body>
+</html>
